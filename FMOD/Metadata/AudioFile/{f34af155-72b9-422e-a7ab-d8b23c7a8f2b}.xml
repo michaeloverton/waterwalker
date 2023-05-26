@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f34af155-72b9-422e-a7ab-d8b23c7a8f2b}">
+		<property name="assetPath">
+			<value>Theme from Q [TubeRipper.com].mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>440.3461224489796</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7d0309ea-e318-4af9-83f6-c0927ef7efcd}</destination>
+		</relationship>
+	</object>
+</objects>

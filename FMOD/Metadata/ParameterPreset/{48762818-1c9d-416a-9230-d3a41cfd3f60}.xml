@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{48762818-1c9d-416a-9230-d3a41cfd3f60}">
+		<property name="name">
+			<value>technoVolume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{161f619b-b7c6-4bf6-88b4-10d8e32706ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0686e7b8-a4d4-4696-9a34-ebd6f9123ba5}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0686e7b8-a4d4-4696-9a34-ebd6f9123ba5}">
+		<property name="initialValue">
+			<value>0.29999998211860657</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{53d2355c-f71e-4a61-b8cb-320dd90eb43d}">
+		<property name="assetPath">
+			<value>Silent Servant - Violencia (Function rmx) [TubeRipper.com].mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>364.19918367346941</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7d0309ea-e318-4af9-83f6-c0927ef7efcd}</destination>
+		</relationship>
+	</object>
+</objects>

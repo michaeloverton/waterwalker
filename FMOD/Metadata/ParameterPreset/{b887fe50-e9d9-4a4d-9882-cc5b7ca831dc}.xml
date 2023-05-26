@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b887fe50-e9d9-4a4d-9882-cc5b7ca831dc}">
+		<property name="name">
+			<value>masterFilter</value>
+		</property>
+		<relationship name="folder">
+			<destination>{161f619b-b7c6-4bf6-88b4-10d8e32706ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{40310397-07b2-434f-b896-ea06ecd1ec4b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{40310397-07b2-434f-b896-ea06ecd1ec4b}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

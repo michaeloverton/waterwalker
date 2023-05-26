@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d457d3ec-4747-4d40-8890-5f6531ad3c93}">
+		<property name="name">
+			<value>weirdVolume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{161f619b-b7c6-4bf6-88b4-10d8e32706ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{88a6b383-88db-40ca-8b7e-348cd4fb9347}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{88a6b383-88db-40ca-8b7e-348cd4fb9347}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

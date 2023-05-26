@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{598be3e9-e5b9-40da-956b-f59b81657c14}">
+		<property name="name">
+			<value>crowdVolume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{161f619b-b7c6-4bf6-88b4-10d8e32706ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1c966d38-c24b-4adb-b154-96d19fe916bb}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1c966d38-c24b-4adb-b154-96d19fe916bb}">
+		<property name="initialValue">
+			<value>0.29999998211860657</value>
+		</property>
+	</object>
+</objects>

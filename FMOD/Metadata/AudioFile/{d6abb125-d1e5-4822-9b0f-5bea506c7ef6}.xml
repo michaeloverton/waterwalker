@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d6abb125-d1e5-4822-9b0f-5bea506c7ef6}">
+		<property name="assetPath">
+			<value>quiet-traffic.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>120.25</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7d0309ea-e318-4af9-83f6-c0927ef7efcd}</destination>
+		</relationship>
+	</object>
+</objects>

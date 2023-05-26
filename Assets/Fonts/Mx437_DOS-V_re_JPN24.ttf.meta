@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 561bcda221016444cac89f6281acc436
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mx437 DOS/V re. JPN24
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 470cf8f049a76ce4db56509580a62b38, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

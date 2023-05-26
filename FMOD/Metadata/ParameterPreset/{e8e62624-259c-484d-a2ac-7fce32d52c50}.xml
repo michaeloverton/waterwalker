@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e8e62624-259c-484d-a2ac-7fce32d52c50}">
+		<property name="name">
+			<value>masterPhaser</value>
+		</property>
+		<relationship name="folder">
+			<destination>{161f619b-b7c6-4bf6-88b4-10d8e32706ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f0b3659e-c1ce-4d41-a3cd-561fdbeec812}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f0b3659e-c1ce-4d41-a3cd-561fdbeec812}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

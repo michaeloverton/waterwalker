@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{86154caf-7e7e-41e0-af47-0b98958229ca}">
+		<property name="name">
+			<value>trafficVolume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{161f619b-b7c6-4bf6-88b4-10d8e32706ba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c8d82479-8822-4e45-9812-e4198787f565}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c8d82479-8822-4e45-9812-e4198787f565}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>
