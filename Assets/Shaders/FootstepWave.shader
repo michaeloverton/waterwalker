@@ -51,7 +51,7 @@ Shader "Custom/FootstepWave"
         int _WaveCount;
         float _Speed;
         float2 _Point;
-        float _FootstepMultiplier;
+        float _FootstepMultiplier; // can maybe kill this.
         float _OuterFadeDistance;
         float _InnerFadeDistance;
         float _InnerFadeBlackDistance;
@@ -61,11 +61,11 @@ Shader "Custom/FootstepWave"
             float2 dis = 10 * distance(uv, _Point.xy);
             // return dis;
 
-            float wav2e = cos( (dis - _Time.y * _Speed ) * TAU * _WaveCount ) * 0.5 + 0.5;
-            wav2e *= saturate(1 - (1/_OuterFadeDistance) * dis);
-            wav2e *= saturate((1/_InnerFadeDistance) * (dis - _InnerFadeBlackDistance));
+            float wave = cos( (dis - _Time.y * _Speed ) * TAU * _WaveCount ) * 0.5 + 0.5;
+            wave *= saturate(1 - (1/_OuterFadeDistance) * dis);
+            wave *= saturate((1/_InnerFadeDistance) * (dis - _InnerFadeBlackDistance));
             
-            return wav2e;
+            return wave;
 
             // float2 uvsCentered = uv * 2 - 1;
             // float2 distanceToPoint = distance(uvsCentered, _Point.xy);
@@ -78,6 +78,14 @@ Shader "Custom/FootstepWave"
 
         void vert(inout appdata_full v) {
             v.vertex.y = GetWave(v.texcoord) * _WaveAmp * _FootstepMultiplier;  //* saturate(lerp(1, 0, _Time.y/3));
+
+            // FUTURE CODE WILL LOOK LIKE:
+            // v.vertex.y = 
+            //     GetWave(v.texcoord, _StepOne) + 
+            //     GetWave(v.texcoord, _StepTwo) + 
+            //     GetWave(v.texcoord, _StepThree) + 
+            //     GetWave(v.texcoord, _StepFour) + 
+            //     GetWave(v.texcoord, _StepFive);
         }
 
         void surf (Input IN, inout SurfaceOutputStandard o)
