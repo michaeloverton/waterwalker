@@ -57,34 +57,50 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints:
-    - _WaveCount: 4
+    - _WaveCount: 6
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _Distance: 0.736
     - _DstBlend: 0
-    - _FootstepMultiplier: 0
+    - _FootstepMultiplier: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.931
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _InnerDistance: 0.144
     - _InnerFadeBlackDistance: 0.211
-    - _InnerFadeDistance: 0.241
+    - _InnerFadeBlackDistanceFive: 0.207
+    - _InnerFadeBlackDistanceFour: 0.27
+    - _InnerFadeBlackDistanceOne: 0.163
+    - _InnerFadeBlackDistanceThree: 0.364
+    - _InnerFadeBlackDistanceTwo: 1
+    - _InnerFadeDistance: 0.351
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OuterFadeDistance: 0.866
+    - _OuterFadeBlackDistance: 0
+    - _OuterFadeBlackDistanceFive: 0.809
+    - _OuterFadeBlackDistanceFour: 0.782
+    - _OuterFadeBlackDistanceOne: 0.785
+    - _OuterFadeBlackDistanceThree: 0
+    - _OuterFadeBlackDistanceTwo: 0
+    - _OuterFadeDistance: 0.523
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _Speed: 0.226
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveAmp: 0.11
+    - _WaveAmp: 0.02
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Point: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Point: {r: 0.4986099, g: 0.5088957, b: 0, a: 0}
+    - _StepFive: {r: 0.6, g: 0.4, b: 0, a: 0}
+    - _StepFour: {r: 0.6, g: 0.6, b: 0, a: 0}
+    - _StepOne: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _StepThree: {r: 0.35, g: 0.59, b: 0, a: 0}
+    - _StepTwo: {r: 0.62, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

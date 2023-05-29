@@ -1903,7 +1903,8 @@ GameObject:
   - component: {fileID: 1711813855165992145}
   - component: {fileID: 1398497538}
   - component: {fileID: 3469287838088050716}
-  m_Layer: 7
+  - component: {fileID: 3469287838088050717}
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2034,7 +2035,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147484028164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: eabf88fe187c75848a294f0767bbb070, type: 2}
   m_CullingMode: 0
@@ -2046,6 +2047,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3469287838088050717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147484028164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91e62ddf62aa1c4e8405b1250e027b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outerRippleDuration: 3
+  outerStartValue: -0.5
+  outerEndValue: 1
+  innerRippleDuration: 3
+  innerStartValue: 0.2
+  innerEndValue: 2
+  innerTweenDelayTime: 0.5
+  footstepProps:
+  - position: _StepOne
+    innerFade: _InnerFadeBlackDistanceOne
+    outerFade: _OuterFadeBlackDistanceOne
+  - position: _StepTwo
+    innerFade: _InnerFadeBlackDistanceTwo
+    outerFade: _OuterFadeBlackDistanceTwo
+  - position: _StepThree
+    innerFade: _InnerFadeBlackDistanceThree
+    outerFade: _OuterFadeBlackDistanceThree
+  - position: _StepFour
+    innerFade: _InnerFadeBlackDistanceFour
+    outerFade: _OuterFadeBlackDistanceFour
+  - position: _StepFive
+    innerFade: _InnerFadeBlackDistanceFive
+    outerFade: _OuterFadeBlackDistanceFive
 --- !u!1001 &4139899399305405685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2053,6 +2089,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1160745534683214237, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
+      propertyPath: footstepDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160745534683214237, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
+      propertyPath: waterLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160745534683214237, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 4139899398396675376, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
       propertyPath: m_CollisionDetection
       value: 3
@@ -2101,13 +2149,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4139899398396675379, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 384
+      objectReference: {fileID: 0}
     - target: {fileID: 4139899398396675382, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6843002998310708139, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
-      propertyPath: footstepDistance
-      value: 10
+    - target: {fileID: 8378030326615006565, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8378030326615006565, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
       propertyPath: footstepDecay
@@ -2116,11 +2168,11 @@ PrefabInstance:
     - target: {fileID: 8378030326615006565, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
       propertyPath: groundMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: f7cd7d9a57335564c85329bd4e8dc98b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8378030326615006565, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
       propertyPath: groundAnimation
       value: 
-      objectReference: {fileID: 3469287838088050716}
+      objectReference: {fileID: 0}
     - target: {fileID: 8378030326615006565, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
       propertyPath: footstepDistance
       value: 10

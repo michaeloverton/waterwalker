@@ -22,7 +22,7 @@ public class PlayerGround : MonoBehaviour
         previousFootstepPosition = transform.position;
 
         // anim = GetComponent<Animator>();
-        RigidFootstep.Instance.OnFootstep += OnFootstep;
+        FootstepManager.Instance.OnFootstep += OnFootstep;
     }
 
     void OnFootstep(Vector3 position)
