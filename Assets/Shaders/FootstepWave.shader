@@ -2,13 +2,24 @@ Shader "Custom/FootstepWave"
 {
     Properties
     {
+        // Surface properties
+        [Header(Surface Attributes)]
         _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
+
+        // Footstep properties
+        [Header(Footstep Global)]
         _WaveAmp ("Wave Amplitude", Range(0,.5)) = 0.01
         _WaveCount ("Wave Count", Integer) = 5
         _Speed ("Speed", Range(0,1)) = 0.1
+        // _FootstepMultiplier ("Footstep Multiplier", Range(0,1)) = 0
+        _OuterFadeDistance ("Outer Fade Distance", Range(0,1)) = 1
+        _InnerFadeDistance ("Inner Fade Distance", Range(0,1)) = 0
+
+        // Steps
+        [Header(Footsteps)]
         _StepOne ("Step One", Vector) = (0,0,0,0)
         _InnerFadeBlackDistanceOne("Inner Fade Black Distance One", Range(0,1)) = 0
         _OuterFadeBlackDistanceOne ("Outer Fade Black Distance One", Range(0,1)) = 0
@@ -39,9 +50,19 @@ Shader "Custom/FootstepWave"
         _Step10 ("Step 10", Vector) = (0,0,0,0)
         _InnerFadeBlackDistance10("Inner Fade Black Distance 10", Range(0,1)) = 0
         _OuterFadeBlackDistance10 ("Outer Fade Black Distance 10", Range(0,1)) = 0
-        // _FootstepMultiplier ("Footstep Multiplier", Range(0,1)) = 0
-        _OuterFadeDistance ("Outer Fade Distance", Range(0,1)) = 1
-        _InnerFadeDistance ("Inner Fade Distance", Range(0,1)) = 0
+        
+        // Landing properties
+        [Header(Landing Global)] 
+        _LandWaveAmp ("Landing Wave Amplitude", Range(0,.5)) = 0.01
+        _LandWaveCount ("Landing Wave Count", Integer) = 5
+        _LandWaveSpeed ("Landing Speed", Range(0,1)) = 0.1
+        _LandOuterFadeDistance ("Landing Outer Fade Distance", Range(0,1)) = 1
+        _LandInnerFadeDistance ("Landing Inner Fade Distance", Range(0,1)) = 0
+
+        [Header(Landings)] 
+        _Land1 ("Landing 1", Vector) = (0,0,0,0)
+        _LandInnerBlackDistance1("Landing Inner Black Distance 1", Range(0,1)) = 0
+        _LandOuterBlackDistance1 ("Landing Outer Black Distance 1", Range(0,1)) = 0
         
     }
     SubShader
@@ -79,6 +100,9 @@ Shader "Custom/FootstepWave"
         float _WaveAmp;
         int _WaveCount;
         float _Speed;
+        float _OuterFadeDistance;
+        float _InnerFadeDistance;
+        // float _FootstepMultiplier; // can maybe kill this.
 
         // Grounded footsteps
         float2 _StepOne;
@@ -142,12 +166,16 @@ Shader "Custom/FootstepWave"
         float _InnerFadeBlackDistance20;
         float _OuterFadeBlackDistance20;
 
-        // Jump landing steps
+        // Landing
+        float _LandWaveAmp;
+        int _LandWaveCount;
+        float _LandWaveSpeed;
+        float _LandOuterFadeDistance;
+        float _LandInnerFadeDistance;
 
-        // float _FootstepMultiplier; // can maybe kill this.
-        float _OuterFadeDistance;
-        float _InnerFadeDistance;
-        
+        float2 _Land1;
+        float _LandInnerBlackDistance1;
+        float _LandOuterBlackDistance1;
 
         float GetWave( float2 uv, float2 stepPosition, float innerBlackDistance, float outerBlackDistance ) {
             float2 dis = 10 * distance(uv, stepPosition);
@@ -165,6 +193,15 @@ Shader "Custom/FootstepWave"
             // wave *= saturate(1 - distanceToPoint);
 
             // return wave;
+        }
+
+        float GetLandingWave( float2 uv, float2 stepPosition, float innerBlackDistance, float outerBlackDistance ) {
+            float2 dis = 10 * distance(uv, stepPosition);
+            float wave = cos( (dis - _Time.y * _LandWaveSpeed ) * TAU * _LandWaveCount ) * 0.5 + 0.5;
+            wave *= saturate(1 - ((1/_LandOuterFadeDistance) * (dis - outerBlackDistance)));
+            wave *= saturate((1/_LandInnerFadeDistance) * (dis - innerBlackDistance));
+            
+            return wave;
         }
 
         void vert(inout appdata_full v) {
@@ -191,6 +228,9 @@ Shader "Custom/FootstepWave"
                 GetWave(v.texcoord, _Step18, _InnerFadeBlackDistance18, _OuterFadeBlackDistance18) +
                 GetWave(v.texcoord, _Step19, _InnerFadeBlackDistance19, _OuterFadeBlackDistance19) +
                 GetWave(v.texcoord, _Step20, _InnerFadeBlackDistance20, _OuterFadeBlackDistance20)
+            ) +
+            _LandWaveAmp * (
+                GetLandingWave(v.texcoord, _Land1, _LandInnerBlackDistance1, _LandOuterBlackDistance1)
             );
         }
 

@@ -259,4 +259,9 @@ public class RigidMovement : MonoBehaviour
 
         return false;
     }
+
+    public bool IsGrounded()
+    {
+        return isGrounded;
+    }
 }
