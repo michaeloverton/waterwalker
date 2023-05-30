@@ -10,6 +10,7 @@ public class FootstepManager : MonoBehaviour
     Vector3 previousPosition;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask waterLayer;
+    RigidMovement movementController;
 
     public delegate void FootstepEvent(Vector3 position);
     public event FootstepEvent OnFootstep;
@@ -22,7 +23,7 @@ public class FootstepManager : MonoBehaviour
 
     void Start()
     {
-        // previousFootstepPosition = transform.position;
+        movementController = GetComponent<RigidMovement>();
         previousPosition = transform.position;
     }
 

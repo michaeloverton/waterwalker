@@ -2059,11 +2059,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f91e62ddf62aa1c4e8405b1250e027b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outerRippleDuration: 3
+  outerRippleDuration: 4
   outerStartValue: -0.5
   outerEndValue: 1
-  innerRippleDuration: 3
-  innerStartValue: 0.2
+  innerRippleDuration: 4
+  innerStartValue: 0
   innerEndValue: 2
   innerTweenDelayTime: 0.5
   footstepProps:
@@ -2082,6 +2082,51 @@ MonoBehaviour:
   - position: _StepFive
     innerFade: _InnerFadeBlackDistanceFive
     outerFade: _OuterFadeBlackDistanceFive
+  - position: _Step6
+    innerFade: _InnerFadeBlackDistance6
+    outerFade: _OuterFadeBlackDistance6
+  - position: _Step7
+    innerFade: _InnerFadeBlackDistance7
+    outerFade: _OuterFadeBlackDistance7
+  - position: _Step8
+    innerFade: _InnerFadeBlackDistance8
+    outerFade: _OuterFadeBlackDistance8
+  - position: _Step9
+    innerFade: _InnerFadeBlackDistance9
+    outerFade: _OuterFadeBlackDistance9
+  - position: _Step10
+    innerFade: _InnerFadeBlackDistance10
+    outerFade: _OuterFadeBlackDistance10
+  - position: _Step11
+    innerFade: _InnerFadeBlackDistance11
+    outerFade: _OuterFadeBlackDistance11
+  - position: _Step12
+    innerFade: _InnerFadeBlackDistance12
+    outerFade: _OuterFadeBlackDistance12
+  - position: _Step13
+    innerFade: _InnerFadeBlackDistance13
+    outerFade: _OuterFadeBlackDistance13
+  - position: _Step14
+    innerFade: _InnerFadeBlackDistance14
+    outerFade: _OuterFadeBlackDistance14
+  - position: _Step15
+    innerFade: _InnerFadeBlackDistance15
+    outerFade: _OuterFadeBlackDistance15
+  - position: _Step16
+    innerFade: _InnerFadeBlackDistance16
+    outerFade: _OuterFadeBlackDistance16
+  - position: _Step17
+    innerFade: _InnerFadeBlackDistance17
+    outerFade: _OuterFadeBlackDistance17
+  - position: _Step18
+    innerFade: _InnerFadeBlackDistance18
+    outerFade: _OuterFadeBlackDistance18
+  - position: _Step19
+    innerFade: _InnerFadeBlackDistance19
+    outerFade: _OuterFadeBlackDistance19
+  - position: _Step20
+    innerFade: _InnerFadeBlackDistance20
+    outerFade: _OuterFadeBlackDistance20
 --- !u!1001 &4139899399305405685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2091,7 +2136,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1160745534683214237, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
       propertyPath: footstepDistance
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1160745534683214237, guid: 233d7568ecaa36e439e6b21e56ac3ed2, type: 3}
       propertyPath: waterLayer.m_Bits

@@ -7,7 +7,7 @@ public class WaterFootstepListener : MonoBehaviour
 {
     Material material;
     int currentFootstep;
-    
+
     [Header("Outer Rim")]
     [SerializeField] [Range(0f, 5f)] float outerRippleDuration;
     [SerializeField] [Range(-1, 1)] float outerStartValue;
@@ -49,6 +49,7 @@ public class WaterFootstepListener : MonoBehaviour
             outerEndValue,
             outerRippleDuration
         )
+        // .SetEase(Ease.InOutExpo)
         .OnComplete(() => material.SetFloat(footstepProps[tweeningStep].outerFade, outerStartValue));
         
         // Inner
@@ -58,6 +59,7 @@ public class WaterFootstepListener : MonoBehaviour
             innerEndValue,
             innerRippleDuration
         )
+        // .SetEase(Ease.InOutExpo)
         .SetDelay(innerTweenDelayTime)
         .OnComplete(() => material.SetFloat(footstepProps[tweeningStep].innerFade, innerStartValue));;
         
